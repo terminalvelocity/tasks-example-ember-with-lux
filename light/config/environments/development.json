@@ -1,0 +1,5 @@
+{
+  "domain": "http://localhost:4000",
+  "sessionKey": "light::development::session",
+  "sessionSecret": "dd4c37eb3317ea2384854309a361677b5286c49cc9430dd10c507e6aa2938afe"
+}

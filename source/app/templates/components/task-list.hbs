@@ -1,0 +1,36 @@
+<div class="ui teal segment">
+
+  <div class="ui right action input">
+    {{input type="text"
+            placeholder="New Task"
+            value=newTitle
+            enter=(action 'create')}}
+
+    <button href="#" {{action 'create'}} class="ui teal button">Add Task</button>
+  </div>
+
+  <div class="ui divided items">
+    {{#each tasks as |task|}}
+      <div class="ui grid">
+
+        <div class="left aligned middle aligned ten wide column">
+          <div class="ui checkbox item">
+            <input type="checkbox"
+                   name="completed"
+                   checked={{task.completed}}
+                   {{action 'save' task on="change"}}>
+
+            <label>{{task.name}}</label>
+          </div>
+        </div>
+
+        <div class="six wide column">
+          <div class="ui right floated red button">
+            <div {{action 'delete' task}} >Remove</div>
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</div>
